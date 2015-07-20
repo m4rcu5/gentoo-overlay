@@ -1,0 +1,12 @@
+<repositories encoding="unicode" version="1.1">
+  <repo quality="experimental">
+    <name>m4rcu5</name>
+    <description>The Gentoo overlay of m4rcu5</description>
+    <owner>
+      <email>marcus@marcusvandam.nl</email>
+      <name>Marcus van Dam</name>
+    </owner>
+    <source type="git">https://github.com/m4rcu5/gentoo-overlay</source>
+    <feed>https://github.com/m4rcu5/gentoo-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
