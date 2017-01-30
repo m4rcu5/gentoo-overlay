@@ -45,9 +45,9 @@ src_install() {
     doins -r ${S}/* || die "Could not install!"
 
     exeinto "/opt/${PN}/"
-    doexe "${S}/Rambox"
+    doexe "${S}/${PN}"
 
-    dosym "/opt/${PN}/Rambox" /usr/bin/Rambox
+    dosym "/opt/${PN}/${PN}" /usr/bin/${PN}
 
     domenu ${FILESDIR}/rambox.desktop
     doicon "${FILESDIR}/${PN}.png"

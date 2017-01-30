@@ -2,7 +2,7 @@
 Name=Rambox
 Comment=Rambox
 GenericName=Rambox Client for Linux
-Exec=/opt/rambox/Rambox %U
+Exec=/opt/rambox/rambox %U
 Icon=rambox
 Type=Application
 StartupNotify=true
