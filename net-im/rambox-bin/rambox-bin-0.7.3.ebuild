@@ -22,20 +22,13 @@ KEYWORDS="~amd64 ~x86"
 
 RESTRICT="mirror bindist"
 
-RDEPEND="dev-libs/libappindicator
-	dev-libs/libpcre:3
-	dev-libs/libtasn1
-	dev-libs/nettle
-	dev-libs/nss
-	dev-libs/nspr
-	gnome-base/gconf:2
+RDEPEND="dev-libs/nss
 	media-libs/alsa-lib
-	media-libs/libpng
-	net-libs/gnutls
+	gnome-base/gconf:2
 	x11-libs/gtk+:2
 	x11-libs/libnotify
-	x11-libs/libXScrnSaver
 	x11-libs/libXtst
+	x11-libs/libXScrnSaver
 "
 
 QA_EXECSTACK="opt/${MY_PN^}/${MY_PN}"
@@ -51,6 +44,9 @@ src_unpack() {
 }
 
 src_install() {
+	# fix crash on some systems due to https://github.com/ramboxapp/community-edition/issues/2481
+	chmod 4755 "${S}"/opt/${MY_PN}/chrome-sandbox
+
 	mv "${S}"/{opt,usr} "${D}"/ || die
 }
 
